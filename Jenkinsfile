@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "rodmosq/docker-spring-boot"
-    registryCredential = ‘dockerhub’
+    registryCredential = "dockerhub"
   }
   agent any
   stages {
