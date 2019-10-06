@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Runimage') {
       steps{
-        sh "docker run -p 8085:8085" + registry + ":$BUILD_NUMBER"
+        sh "docker run -p 8085:8085 " + registry + ":$BUILD_NUMBER"
       }
     }
   }
