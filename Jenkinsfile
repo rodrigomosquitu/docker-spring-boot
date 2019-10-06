@@ -17,13 +17,9 @@ pipeline {
         }
       }
     }
-    stage('Deploy Image') {
+    stage('Runimage') {
       steps{
-        script {
-          docker.withRegistry( '', registryCredential ) {
-            dockerImage.push()
-          }
-        }
+        sh "docker run -p 8085:8085 docker-spring-boot"
       }
     }
   }
